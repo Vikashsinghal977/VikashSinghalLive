@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# local env files
+.env
+
+
+# md x files
+
+CUSTOMIZATION.md
+deploy.md
+FINAL_LAYOUT_OPTIMIZATIONS.md
+FINAL_UI_OPTIMIZATIONS.md
+LAYOUT_OPTIMIZATIONS.md
