@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import SectionBackground from '@/components/ui/SectionBackground';
 
 const Skills = () => {
   const ref = useRef(null);
@@ -20,8 +21,10 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-spacing bg-black" ref={ref}>
-      <div className="site-container">
+    <section id="skills" className="section-spacing section-gradient-alt relative overflow-hidden" ref={ref}>
+      <SectionBackground particleCount={10} variant="default" />
+      
+      <div className="site-container relative z-10">
         <motion.div
           className="section-header text-center"
           initial={{ opacity: 0, y: 30 }}

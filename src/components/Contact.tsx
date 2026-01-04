@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Download } from 'lucide-react';
 import Button from '@/components/ui/Button';
+import SectionBackground from '@/components/ui/SectionBackground';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -46,8 +47,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-spacing bg-gray-900/20" ref={ref}>
-      <div className="site-container">
+    <section id="contact" className="section-spacing section-gradient relative overflow-hidden" ref={ref}>
+      <SectionBackground particleCount={10} variant="subtle" />
+      
+      <div className="site-container relative z-10">
         <motion.div
           className="section-header text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -205,6 +208,28 @@ const Contact = () => {
             </form>
           </motion.div>
         </div>
+
+        {/* Download CV Section */}
+        <motion.div
+          className="mt-10 sm:mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <p className="text-gray-400 text-sm sm:text-base mb-4">
+            Want to know more about my experience?
+          </p>
+          <motion.a
+            href="/cv.pdf"
+            download="Vikash_Singhal_CV.pdf"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3 text-base font-semibold rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200"
+            whileHover={{ scale: 1.02, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Download className="w-5 h-5" />
+            Download My CV
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

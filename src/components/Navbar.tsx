@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
     <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-black/90 backdrop-blur-lg border-b border-gray-800/50 shadow-lg' 
+          ? 'bg-black/10 backdrop-blur-lg border-b border-gray-800/50 shadow-lg' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -46,21 +47,21 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            VS
+            <Image src="/images/bgRemove.svg" alt="Logo" width={170} height={170} />
           </motion.a>
 
           {/* Desktop Menu */}
           <nav className="hidden md:block">
-            <ul className="flex items-center gap-1 lg:gap-2">
+            <ul className="flex items-center gap-1 lg:gap-5">
               {navItems.map((item, index) => (
                 <li key={item.name}>
                   <motion.a
                     href={item.href}
-                    className="relative px-3 lg:px-4 xl:px-5 py-2 lg:py-2.5 text-gray-300 hover:text-white transition-colors duration-200 font-medium text-sm rounded-lg hover:bg-white/5 block"
+                    className="relative px-3 lg:px-4 xl:px-5 py-2 lg:py-2.5 text-gray-300 hover:text-white transition-colors duration-200 font-medium text-md rounded-lg  block"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05, duration: 0.3 }}
-                    whileHover={{ y: -1 }}
+                    whileHover={{ y: -8 }}
                   >
                     {item.name}
                   </motion.a>

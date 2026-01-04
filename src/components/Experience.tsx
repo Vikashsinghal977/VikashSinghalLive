@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Calendar, MapPin, Award } from 'lucide-react';
+import SectionBackground from '@/components/ui/SectionBackground';
 
 const Experience = () => {
   const ref = useRef(null);
@@ -95,8 +96,10 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="section-spacing bg-black" ref={ref}>
-      <div className="site-container">
+    <section id="experience" className="section-spacing section-gradient-alt relative overflow-hidden" ref={ref}>
+      <SectionBackground particleCount={10} variant="default" />
+      
+      <div className="site-container relative z-10">
         <div className="content-container">
           <motion.div
             className="section-header text-center"

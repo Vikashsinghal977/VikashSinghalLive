@@ -5,6 +5,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code, Users, Award, Coffee } from 'lucide-react';
 import Button from '@/components/ui/Button';
+import SectionBackground from '@/components/ui/SectionBackground';
 
 const About = () => {
   const ref = useRef(null);
@@ -18,8 +19,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-spacing bg-gray-900/30" ref={ref}>
-      <div className="site-container">
+    <section id="about" className="section-spacing section-gradient relative overflow-hidden" ref={ref}>
+      <SectionBackground particleCount={8} variant="subtle" />
+      
+      <div className="site-container relative z-10">
         <motion.div
           className="section-header text-center"
           initial={{ opacity: 0, y: 30 }}
