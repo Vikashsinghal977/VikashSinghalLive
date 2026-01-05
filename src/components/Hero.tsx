@@ -59,7 +59,7 @@ const Hero = () => {
             {/* Name with Star Animation */}
             <div className="relative inline-block mb-4 sm:mb-6">
               <motion.h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight"
+                className="text-3xl sm:text-6xl xl:text-7xl font-black leading-tight"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}

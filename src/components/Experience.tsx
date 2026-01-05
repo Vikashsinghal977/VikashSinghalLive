@@ -142,7 +142,7 @@ const Experience = () => {
 
                     {/* Enhanced content card */}
                     <motion.div
-                      className={`ml-16 md:ml-0 ${isEven ? 'md:mr-12 md:text-right' : 'md:ml-12'} md:w-5/12 premium-card p-6 lg:p-8 group`}
+                      className={`ml-16 md:ml-0 ${isEven ? 'md:mr-12 md:text-right' : 'md:ml-12'} md:w-5/12 premium-card group`}
                       whileHover={{ 
                         y: -8, 
                         boxShadow: `0 25px 50px ${colorClasses.glow}`,

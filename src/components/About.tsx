@@ -73,7 +73,7 @@ const About = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="premium-card p-4 sm:p-5 lg:p-6 text-center"
+                className="premium-card text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}

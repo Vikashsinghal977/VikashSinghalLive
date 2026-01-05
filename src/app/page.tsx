@@ -7,7 +7,6 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Experience from '@/components/Experience';
 import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import ScrollProgress from '@/components/ScrollProgress';
 import { motion } from 'framer-motion';
@@ -51,8 +50,6 @@ export default function Home() {
         <Experience />
         <Contact />
       </main>
-      
-      <Footer />
     </motion.div>
   );
 }
